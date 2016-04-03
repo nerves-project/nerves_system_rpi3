@@ -3,21 +3,33 @@ defmodule NervesSystemRpi3.Mixfile do
 
   def project do
     [app: :nerves_system_rpi3,
-    version: "0.4.0-rc3",
-    elixir: "~> 1.2",
-    compilers: Mix.compilers ++ [:nerves_system],
-    deps: deps]
- end
+     version: "0.4.0-rc3",
+     elixir: "~> 1.2",
+     compilers: Mix.compilers ++ [:nerves_system],
+     description: description,
+     package: package,
+     deps: deps]
+  end
 
- def application do
+  def application do
    []
- end
+  end
 
- defp deps do
-   [
-     {:nerves_system, path: "../nerves_system"},
+  defp deps do
+    [{:nerves_system, path: "../nerves_system"},
      {:nerves_system_br, path: "../nerves-system-br"},
-     {:nerves_toolchain_arm_unknown_linux_gnueabihf, path: "../nerves_toolchain_arm_unknown_linux_gnueabihf"}
-   ]
- end
+     {:nerves_toolchain_arm_unknown_linux_gnueabihf, path: "../nerves_toolchain_arm_unknown_linux_gnueabihf"}]
+  end
+
+  defp description do
+   """
+   Nerves System - Raspberry Pi 3 B
+   """
+  end
+
+  defp package do
+   [maintainers: ["Frank Hunleth", "Justin Schneck"],
+    licenses: ["Apache 2.0"],
+    links: %{"Github" => "https://github.com/nerves-project/nerves_system_rpi3"}]
+  end
 end
