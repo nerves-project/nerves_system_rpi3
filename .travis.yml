@@ -1,5 +1,8 @@
-language: bash
-
+language: elixir
+elixir:
+  - 1.2.4
+otp_release:
+  - 18.3
 # It would be possible to use the container-based infrastructure if
 # it ran trusty. However, it doesn't and wget is too old to use for
 # HTTPS to buildroot.net.
@@ -19,8 +22,7 @@ cache:
       - $HOME/.nerves/cache/buildroot
 
 env:
-  - NERVES_SYSTEM_CACHE=none
-  - NERVES_SYSTEM_COMPILER=local
+  - NERVES_SYSTEM_CACHE=none NERVES_SYSTEM_COMPILER=local
 
 script:
   - mix archive.install https://github.com/nerves-project/archives/raw/master/nerves_bootstrap.ez --force
