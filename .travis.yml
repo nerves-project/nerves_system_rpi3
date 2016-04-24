@@ -33,6 +33,8 @@ before_script:
     - export PATH=`pwd`/elixir/bin:$PATH
 
 script:
+  - mix local.hex --force
+  - mix local.rebar --force
   - mix archive.install https://github.com/nerves-project/archives/raw/master/nerves_bootstrap.ez --force
   - mix deps.get
   - mix compile
