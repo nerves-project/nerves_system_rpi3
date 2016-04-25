@@ -21,7 +21,7 @@ defmodule NervesSystemRpi3.Mixfile do
 
   defp deps do
     [{:nerves_system, github: "nerves-project/nerves_system"},
-     {:nerves_system_br, github: "nerves-project/nerves-system-br", tag: "v0.4.0"},
+     {:nerves_system_br, github: "nerves-project/nerves_system_br", tag: "v0.4.0"},
      {:nerves_toolchain_arm_unknown_linux_gnueabihf, github: "nerves-project/nerves_toolchain_arm_unknown_linux_gnueabihf"}]
   end
 
