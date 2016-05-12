@@ -33,7 +33,7 @@ defmodule NervesSystemRpi3.Mixfile do
 
   defp package do
    [maintainers: ["Frank Hunleth", "Justin Schneck"],
-    files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION"],
+    files: ["LICENSE", "mix.exs", "nerves_defconfig", "nerves.exs", "README.md", "VERSION", "rootfs-additions"],
     licenses: ["Apache 2.0"],
     links: %{"Github" => "https://github.com/nerves-project/nerves_system_rpi3"}]
   end
