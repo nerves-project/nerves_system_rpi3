@@ -1,5 +1,11 @@
 # Changelog
 
+## v0.5.2
+  * Enhancements
+    * Enabled USB Printer kernel mod. Needs to be loaded with `modprobe` to use
+  * Bug Fixes(raspberry pi)
+    * Enabled multicast in linux config
+
 ## v0.5.1
   * Nerves.System.BR v0.5.1
     * Bug Fixes(nerves-env)
