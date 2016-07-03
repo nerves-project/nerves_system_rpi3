@@ -47,4 +47,4 @@ hasn't made it to the `linux-firmware` project nor Buildroot, so it is included
 here in a `rootfs-additions` overlay directory. The original firmware files came from
 https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm80211/brcm.
 
-[Image credit](#fritzing): TThis image is from the [Fritzing](http://fritzing.org/home/) parts library.
+[Image credit](#fritzing): This image is from the [Fritzing](http://fritzing.org/home/) parts library.
