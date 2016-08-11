@@ -1,5 +1,13 @@
 # Changelog
 
+## v0.6.1
+
+  * Package versions
+    * Nerves.System.BR v0.6.1
+
+  * New features
+    * All Raspberry Pi 3-specific configuration is now in this repository
+
 ## v0.6.0
   * Nerves.System.BR v0.6.0
     * Package updates

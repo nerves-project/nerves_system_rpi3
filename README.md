@@ -29,7 +29,7 @@ If [available in Hex](https://hex.pm/docs/publish), the package can be installed
   1. Add nerves_system_rpi3 to your list of dependencies in `mix.exs`:
 
         def deps do
-          [{:nerves_system_rpi3, "~> 0.5.2"}]
+          [{:nerves_system_rpi3, "~> 0.6.1"}]
         end
 
   2. Ensure nerves_system_rpi3 is started before your application:
