@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.6.2-dev
+## v0.7.0
 
 When upgrading to this version, be sure to review the updates to
 nerves_defconfig if you have customized this system.
