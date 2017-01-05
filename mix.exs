@@ -12,7 +12,8 @@ defmodule NervesSystemRpi3.Mixfile do
      compilers: Mix.compilers ++ [:nerves_package],
      description: description(),
      package: package(),
-     deps: deps()]
+     deps: deps(),
+     aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]]
   end
 
   def application do
