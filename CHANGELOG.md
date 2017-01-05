@@ -1,5 +1,10 @@
 # Changelog
 
+## v0.9.1
+
+* Bug Fixes
+  * Fixed issues with wifi not starting on some devices
+
 ## v0.9.0
 
 This version switches to using the `nerves_package` compiler. This will
