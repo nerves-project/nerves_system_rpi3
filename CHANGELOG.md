@@ -6,6 +6,8 @@
     * Upgraded the Linux kernel to 4.4.43. This also removes the
       call to mkknlimg which is no longer needed.
     * Bump toolchain to use gcc 5.3 (previously using gcc 4.9.3)
+  * Bug Fixes
+    * brcmfmac is being compiled as a module. This means that in order to use wifi you will need to `modprobe brcmfmac`. This addresses an issue where the module would not initialize properly on some boards.
 
 ## v0.9.1
 
