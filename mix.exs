@@ -22,8 +22,8 @@ defmodule NervesSystemRpi3.Mixfile do
 
   defp deps do
     [{:nerves, "~> 0.4.0"},
-     {:nerves_system_br, "~> 0.9.0"},
-     #{:nerves_system_br, github: "nerves-project/nerves_system_br", branch: "br-2016.11.1-bump"},
+     {:nerves_system_br, "~> 0.9.2"},
+     #{:nerves_system_br, github: "nerves-project/nerves_system_br", branch: "rpi-updates"},
      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.9.0"}]
   end
 
