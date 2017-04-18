@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.12.0-dev
+## v0.12.0
 
   * nerves_system_br v0.10.0
     * Buildroot 2017.02
