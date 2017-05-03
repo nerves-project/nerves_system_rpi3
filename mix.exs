@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi3.Mixfile do
+defmodule Nerves.System.Rpi3.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -13,11 +13,12 @@ defmodule NervesSystemRpi3.Mixfile do
      description: description(),
      package: package(),
      deps: deps(),
+     kernel_modules: ["brcmfmac"],
      aliases: ["deps.precompile": ["nerves.env", "deps.precompile"]]]
   end
 
   def application do
-   []
+   [mod: {Nerves.System.Rpi3, []}]
   end
 
   defp deps do
