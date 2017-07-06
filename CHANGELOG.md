@@ -1,6 +1,6 @@
 # Changelog
 
-## v0.13.0-dev
+## v0.13.0
 
   * nerves_system_br v0.12.1
     * erlinit 1.1.1
