@@ -1,5 +1,18 @@
 # Changelog
 
+## v0.15.0
+
+  * nerves_system_br v0.13.3
+    * erlinit 1.1.4
+
+  * New features
+    * Firmware updates verify that they're updating the right target. If the target
+      doesn't say that it's an `rpi3` through the firmware metadata, the update
+      will fail.
+    * Added meta-misc and meta-vcs-identifier to the `fwup.conf` metadata for use
+      by users and for the regression test framework
+    * Use String.trim instead of String.strip to silence Elixir 1.5 warnings
+
 ## v0.14.0
 
   * nerves_system_br v0.13.2
