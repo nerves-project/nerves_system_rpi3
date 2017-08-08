@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.16.0
+  This release contains an updated toolchain with Linux 4.1 Headers.
+  You will have to clean and compile any c/c++ code in your project and
+  dependencies. Failure to do so will result in an error when producing firmware.
+
+  * nerves_system_br v0.13.5
+    * fwup 0.15.4
+
+  * Nerves toolchain v0.11.0
+    https://github.com/nerves-project/toolchains/releases/tag/v0.11.0
+
 ## v0.15.0
 
   * nerves_system_br v0.13.3
