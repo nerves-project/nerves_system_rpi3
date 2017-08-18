@@ -1,5 +1,5 @@
 # Raspberry Pi 3 Model B
-[![Build Status](https://travis-ci.org/nerves-project/nerves_system_rpi3.png?branch=master)](https://travis-ci.org/nerves-project/nerves_system_rpi3)
+[![CircleCI](https://circleci.com/gh/nerves-project/nerves_system_rpi3.svg?style=svg)](https://circleci.com/gh/nerves-project/nerves_system_rpi3)
 
 This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 
