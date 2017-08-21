@@ -173,6 +173,6 @@ workflows:
             - build_system
           filters:
             branches:
-              only: master
+              ignore: /.*/
             tags:
-              only: /v(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)\.(?:0|[1-9]\d*)/
+              only: /v.*/
