@@ -159,6 +159,9 @@ workflows:
     jobs:
       - build_system:
           context: org-global
+          filters:
+            tags:
+              only: /.*/
       - build_test:
           context: org-global
           requires:
