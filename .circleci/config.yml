@@ -111,7 +111,9 @@ jobs:
             --branch $CIRCLE_BRANCH
             --tag $CIRCLE_TAG
             --pr $CIRCLE_PULL_REQUEST
-            --build-url $CIRCLE_BUILD_URL
+            --ci circleci
+            --ci-build-url $CIRCLE_BUILD_URL
+            --ci-build-num $CIRCLE_BUILD_NUM
       - run:
           name: "Sign test fw artifact"
           command: fwup --sign --private-key $NERVES_FW_PRIV_KEY -i /nerves/build/test/_build/test/nerves/images/test.fw -o /nerves/deploy/test/artifacts/${CIRCLE_SHA1}.fw
@@ -135,7 +137,7 @@ jobs:
           key: nerves/deploy/test-{{ .Revision }}-{{ .Environment.CIRCLE_TAG }}
       - deploy:
           name: Publish notification on SNS
-          command: aws sns publish --topic-arn arn:aws:sns:us-east-1:991424406598:nerves-test-firmware --message "$(cat /nerves/deploy/test/artifacts/${CIRCLE_SHA1}.json)"
+          command: aws sns publish --topic-arn $AWS_SNS_TOPIC_ARN --message "$(cat /nerves/deploy/test/artifacts/${CIRCLE_SHA1}.json)"
 
   deploy_system:
     <<: *defaults
