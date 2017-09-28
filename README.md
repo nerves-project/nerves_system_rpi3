@@ -19,32 +19,16 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | UART                 | 1 available - ttyS0             |
 | Camera               | Yes - via rpi-userland          |
 | Ethernet             | Yes                             |
-| WiFi                 | Yes - Nerves.InterimWiFi        |
-| Bluetooth            | Not yet                         |
+| WiFi                 | Yes - Nerves.Network            |
+| Bluetooth            | Not supported yet               |
 
-## Installation
-
-If [available in Hex](https://hex.pm/docs/publish), the package can be installed as:
-
-  1. Add nerves_system_rpi3 to your list of dependencies in `mix.exs`:
-
-        def deps do
-          [{:nerves_system_rpi3, "~> 0.11.0"}]
-        end
-
-  2. Ensure nerves_system_rpi3 is started before your application:
-
-        def application do
-          [applications: [:nerves_system_rpi3]]
-        end
-
-## Built-in WiFi Firmware
+## Supported WiFi devices and firmware
 
 WiFi modules almost always require proprietary firmware to be loaded for them to work. The
 Linux kernel handles this and firmware blobs are maintained in the
 `linux-firmware` project. The firmware for the built-in WiFi module on the RPi3
 hasn't made it to the `linux-firmware` project nor Buildroot, so it is included
-here in a `rootfs-additions` overlay directory. The original firmware files came from
+here in a `rootfs_overlay` overlay directory. The original firmware files came from
 https://github.com/RPi-Distro/firmware-nonfree/blob/master/brcm80211/brcm.
 
 [Image credit](#fritzing): This image is from the [Fritzing](http://fritzing.org/home/) parts library.
