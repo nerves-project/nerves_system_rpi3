@@ -20,28 +20,25 @@ websocket_protocol = System.get_env("WEBSOCKET_PROTOCOL") || "ws"
 # Common configuration
 
 # Configure bootloader boot order.
-config :bootloader,
-  app: :nerves_system_test,
-  init: [:nerves_runtime, :nerves_network]
+config(:bootloader, app: :nerves_system_test, init: [:nerves_runtime, :nerves_network])
 
 # Only trust signed firmware
-config :nerves_system_test, :firmware,
-  public_key: System.get_env("NERVES_FW_PUB_KEY")
+config(:nerves_system_test, :firmware, public_key: System.get_env("NERVES_FW_PUB_KEY"))
 
 # Configure system_registry term storage to store the wifi credentials on the
 #  app data partition. If the device is using eth0 as the primary connection
 #  mechanism the wlan0 settings do not need to be configured.
-config :system_registry, SystemRegistry.TermStorage,
-  path: "/root/system_registry",
-  scopes: [
-    [:config, :network_interface, "wlan0", :ssid],
-    [:config, :network_interface, "wlan0", :psk]
-  ]
+config(:system_registry, SystemRegistry.TermStorage, path: "/root/system_registry", scopes: [
+  [:config, :network_interface, "wlan0", :ssid],
+  [:config, :network_interface, "wlan0", :psk]
+])
 
 # Configure the default interface settings.
 # wlan0 | eth0 - Used to establish a connection to the test server.
 # usb0 - configured with linklocal to be validated as part of the test results.
-config :nerves_network, :default,
+config(
+  :nerves_network,
+  :default,
   eth0: [
     ipv4_address_method: :dhcp
   ],
@@ -51,10 +48,14 @@ config :nerves_network, :default,
   usb0: [
     ipv4_address_method: :linklocal
   ]
+)
 
 # Configure the url for the connection to the test server phoenix channel socket.
-config :nerves_system_test, NervesTestServer.Socket,
+config(
+  :nerves_system_test,
+  NervesTestServer.Socket,
   url: "#{websocket_protocol}://#{test_server}/socket/websocket"
+)
 
 # Configure the test suite. nerves_system_test needs to know information such as
 #  system - the name of the system repo the tests are being executed on
@@ -65,24 +66,24 @@ config :nerves_system_test, NervesTestServer.Socket,
 #    of the app and dependencies. The default layout runs tests that are common
 #    across devices (:nerves_system_test) and those that are specific to the
 #    device (this app)
-config :nerves_system_test,
-  system: system,
-  network_interface: network_interface,
-  tests: [
-    {:test, :priv_dir, "test"},
-    {:nerves_system_test, :priv_dir, "test"}
-  ]
+config(:nerves_system_test, system: system, network_interface: network_interface, tests: [
+  {:test, :priv_dir, "test"},
+  {:nerves_system_test, :priv_dir, "test"}
+])
 
 # The configuration stored here is duplicated from the project so it can be
 #  validated by nerves_system_test because the source is unavailable at runtime.
-config :nerves_runtime, :kv,
+config(
+  :nerves_runtime,
+  :kv,
   nerves_fw_application_part0_devpath: app_part_devparth,
   nerves_fw_application_part0_fstype: "ext4",
   nerves_fw_application_part0_target: "/root",
   nerves_fw_architecture: arch,
   nerves_fw_author: "The Nerves Team",
-  nerves_fw_description: Mix.Project.config[:description],
+  nerves_fw_description: Mix.Project.config()[:description],
   nerves_fw_platform: platform,
-  nerves_fw_product: Mix.Project.config[:app],
+  nerves_fw_product: Mix.Project.config()[:app],
   nerves_fw_vcs_identifier: System.get_env("NERVES_FW_VCS_IDENTIFIER"),
-  nerves_fw_version: Mix.Project.config[:version]
+  nerves_fw_version: Mix.Project.config()[:version]
+)

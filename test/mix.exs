@@ -1,7 +1,9 @@
-if Mix.env == :test do
-  hash = :os.cmd('git rev-parse HEAD')
+if Mix.env() == :test do
+  hash =
+    :os.cmd('git rev-parse HEAD')
     |> to_string
-    |> String.trim
+    |> String.trim()
+
   System.put_env("NERVES_FW_VCS_IDENTIFIER", hash)
 end
 
@@ -9,14 +11,16 @@ defmodule Test.Mixfile do
   use Mix.Project
 
   def project do
-    [app: :test,
-     version: "0.1.0",
-     elixir: "~> 1.4",
-     archives: [nerves_bootstrap: "~> 0.6"],
-     build_embedded: Mix.env == :prod,
-     start_permanent: Mix.env == :prod,
-     aliases: aliases(),
-     deps: deps()]
+    [
+      app: :test,
+      version: "0.1.0",
+      elixir: "~> 1.4",
+      archives: [nerves_bootstrap: "~> 0.6"],
+      build_embedded: Mix.env() == :prod,
+      start_permanent: Mix.env() == :prod,
+      aliases: aliases(),
+      deps: deps()
+    ]
   end
 
   # Configuration for the OTP application.
@@ -38,13 +42,14 @@ defmodule Test.Mixfile do
       {:nerves, "~> 0.7", runtime: false},
       {:nerves_system_rpi3, path: "../", runtime: false},
       {:nerves_system_test, github: "nerves-project/nerves_system_test"}
-      #{:nerves_system_test, path: "../../nerves_system_test"}
+      # {:nerves_system_test, path: "../../nerves_system_test"}
     ]
   end
 
   def aliases() do
-    ["deps.precompile": ["nerves.precompile", "deps.precompile"],
-     "deps.loadpaths":  ["deps.loadpaths", "nerves.loadpaths"]]
+    [
+      "deps.precompile": ["nerves.precompile", "deps.precompile"],
+      "deps.loadpaths": ["deps.loadpaths", "nerves.loadpaths"]
+    ]
   end
-
 end
