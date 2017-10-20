@@ -1,6 +1,20 @@
 # Changelog
 
-## v0.16.2-dev
+## v0.17.0
+
+  Updated dependencies
+  * [nerves_system_br v0.14.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.14.0)
+    * [Buildroot 2017.08](https://git.busybox.net/buildroot/plain/CHANGES?id=2017.08)
+    * [fwup 0.17.0](https://github.com/fhunleth/fwup/releases/tag/v0.17.0)
+    * [erlinit 1.2.0](https://github.com/nerves-project/erlinit/releases/tag/v1.2.0)
+    * [nbtty 0.3.0](https://github.com/fhunleth/nbtty/releases/tag/v0.3.0)
+
+  * Enhancements
+    * Add global patch directory
+
+    This is required to pull in the e2fsprogs patch that's needed now that
+    util-linux's uuid_generate function calls getrandom and can block
+    indefinitely for the urandom pool to initialize
 
 ## v0.16.1
 
@@ -8,6 +22,7 @@
   * nerves_system_br v0.13.7
 
 ## v0.16.0
+
   This release contains an updated toolchain with Linux 4.1 Headers.
   You will have to clean and compile any c/c++ code in your project and
   dependencies. Failure to do so will result in an error when producing firmware.
