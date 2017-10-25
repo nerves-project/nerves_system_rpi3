@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi3.Mixfile do
+defmodule LtSystemRpi3.Mixfile do
   use Mix.Project
 
   @version Path.join(__DIR__, "VERSION")
@@ -7,7 +7,7 @@ defmodule NervesSystemRpi3.Mixfile do
 
   def project do
     [
-      app: :nerves_system_rpi3,
+      app: :lt_system_rpi3,
       version: @version,
       elixir: "~> 1.3",
       compilers: Mix.compilers() ++ [:nerves_package],
