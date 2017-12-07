@@ -1,5 +1,16 @@
 # Changelog
 
+## v0.18.0
+  
+  Updated dependencies
+  * [nerves_system_br v0.15.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.15.0)
+  * [toolchain v0.12.1](https://github.com/nerves-project/toolchains/releases/tag/v0.12.1)
+
+  * Enhancements
+    * Support for nerves 0.8. Moves nerves.exs into mix.exs
+    * Support for the Raspberry Pi Compute Module
+    * Select ARM Cortex A53 as CPU for Buildroot
+
 ## v0.17.1
   Updated dependencies
   * [nerves_system_br v0.14.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.14.1)
