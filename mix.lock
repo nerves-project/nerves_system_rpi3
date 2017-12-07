@@ -1,5 +1,5 @@
 %{"distillery": {:hex, :distillery, "1.5.2", "eec18b2d37b55b0bcb670cf2bcf64228ed38ce8b046bb30a9b636a6f5a4c0080", [:mix], [], "hexpm"},
-  "nerves": {:hex, :nerves, "0.8.1", "6274f54ffb697bd2db3976edc052ba159722061dc7e847767226a554f3ab2ec4", [:mix], [{:distillery, "~> 1.4", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
+  "nerves": {:hex, :nerves, "0.8.3", "cd3db3adadf5d4191249770ff2f247884408722f1fef2fa1e24f3145972bcf6f", [:mix], [{:distillery, "~> 1.4", [hex: :distillery, repo: "hexpm", optional: false]}], "hexpm"},
   "nerves_system_br": {:hex, :nerves_system_br, "0.15.0", "4c684ec9e5afe340fdd606a40cea04e44fee291e08fed7cffcaae9ba62b8c279", [:mix], [], "hexpm"},
-  "nerves_toolchain_arm_unknown_linux_gnueabihf": {:hex, :nerves_toolchain_arm_unknown_linux_gnueabihf, "0.12.0", "7d6a62fd4d59b04867891bca7c17fc134b7100c6f5fab7b728df65f4ee23d211", [:mix], [{:nerves, "~> 0.8", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_toolchain_ctng, "~> 1.2", [hex: :nerves_toolchain_ctng, repo: "hexpm", optional: false]}], "hexpm"},
-  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "1.2.0", "ee7fafe2ba64f10330993dbfbee942d064905c3a5f746076c098e5a61e4aab01", [:mix], [], "hexpm"}}
+  "nerves_toolchain_arm_unknown_linux_gnueabihf": {:hex, :nerves_toolchain_arm_unknown_linux_gnueabihf, "0.12.1", "8a65f0123cfee1d229b32c03ce5ee87ce587e6dc0b2dda7de71f290b2fa24386", [:mix], [{:nerves, "~> 0.8", [hex: :nerves, repo: "hexpm", optional: false]}, {:nerves_toolchain_ctng, "~> 1.2", [hex: :nerves_toolchain_ctng, repo: "hexpm", optional: false]}], "hexpm"},
+  "nerves_toolchain_ctng": {:hex, :nerves_toolchain_ctng, "1.2.1", "78c7c6cbd086f6b5c0302ed4f1950a3eb9ae8a38d97a98d5266a67d53008b40d", [:mix], [], "hexpm"}}

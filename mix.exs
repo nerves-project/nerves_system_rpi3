@@ -44,7 +44,7 @@ defmodule NervesSystemRpi3.Mixfile do
     [
       {:nerves, "~> 0.8", runtime: false},
       {:nerves_system_br, "~> 0.15.0", runtime: false, app: false},
-      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.12.0", runtime: false, app: false}
+      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.12.1", runtime: false, app: false}
     ]
   end
 
