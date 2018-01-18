@@ -1,5 +1,7 @@
 # Changelog
 
+## v0.19.2-dev
+
 ## v0.19.1
 
   Updated dependencies
@@ -18,14 +20,14 @@
     * Start running nerves_system_linter to check for configuration errors.
     * Disable console blanking for HDMI to make it easier to capture error messages.
     * Automount the boot partition readonly at `/boot`
-    * Support for reverting firmware. 
-      
+    * Support for reverting firmware.
+
       See [Reverting Firmware](https://hexdocs.pm/nerves_runtime/readme.html#reverting-firmware) for more info on reverting firmware.
-      
+
       See [fwup-revert.conf](https://github.com/nerves-project/nerves_system_rpi/blob/master/fwup-revert.conf) for more information on how fwup handles reverting.
 
 ## v0.18.0
-  
+
   Updated dependencies
   * [nerves_system_br v0.15.0](https://github.com/nerves-project/nerves_system_br/releases/tag/v0.15.0)
   * [toolchain v0.12.1](https://github.com/nerves-project/toolchains/releases/tag/v0.12.1)
