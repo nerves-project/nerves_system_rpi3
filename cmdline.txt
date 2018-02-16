@@ -1,1 +1,1 @@
-console=tty1 console=ttyS0,115200 root=/dev/mmcblk0p2 rootwait consoleblank=0
+console=tty1 console=ttyS0,115200 fbcon=scrollback:1024k root=/dev/mmcblk0p2 rootwait consoleblank=0
