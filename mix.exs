@@ -16,14 +16,19 @@ defmodule NervesSystemRpi3.Mixfile do
       description: description(),
       package: package(),
       deps: deps(),
-      aliases: [
-        "deps.precompile": ["nerves.env", "deps.precompile"],
-        "deps.get": ["deps.get", "nerves.deps.get"]]
+      aliases: [loadconfig: [&bootstrap/1], docs: ["docs", &copy_images/1]],
+      docs: [extras: ["README.md"], main: "readme"]
     ]
   end
 
   def application do
     []
+  end
+
+  defp bootstrap(args) do
+    System.put_env("MIX_TARGET", "rpi3")
+    Application.start(:nerves_bootstrap)
+    Mix.Task.run("loadconfig", args)
   end
 
   def nerves_package do
@@ -42,10 +47,11 @@ defmodule NervesSystemRpi3.Mixfile do
 
   defp deps do
     [
-      {:nerves, "~> 0.9", runtime: false },
-      {:nerves_system_br, "0.17.0", runtime: false},
-      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 0.13.0", runtime: false},
-      {:nerves_system_linter, "~> 0.2.2", runtime: false}
+      {:nerves, "~> 1.0-rc", runtime: false },
+      {:nerves_system_br, "~> 1.0-rc", runtime: false},
+      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 1.0-rc", runtime: false},
+      {:nerves_system_linter, "~> 0.3.0", runtime: false},
+      {:ex_doc, "~> 0.18", only: :dev}
     ]
   end
 
@@ -80,5 +86,10 @@ defmodule NervesSystemRpi3.Mixfile do
       "linux-4.4.defconfig",
       "config.txt"
     ]
+  end
+
+  # Copy the images referenced by docs, since ex_doc doesn't do this.
+  defp copy_images(_) do
+    File.cp_r("assets", "doc/assets")
   end
 end

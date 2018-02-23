@@ -15,10 +15,10 @@ defmodule Test.Mixfile do
       app: :test,
       version: "0.1.0",
       elixir: "~> 1.4",
-      archives: [nerves_bootstrap: "~> 0.7"],
+      archives: [nerves_bootstrap: "~> 1.0-rc"],
       build_embedded: Mix.env() == :prod,
       start_permanent: Mix.env() == :prod,
-      aliases: Nerves.Bootstrap.add_aliases([]),
+      aliases: [loadconfig: [&bootstrap/1]],
       deps: deps()
     ]
   end
@@ -27,6 +27,12 @@ defmodule Test.Mixfile do
   #
   # Type `mix help compile.app` for more information.
   def application, do: []
+
+  defp bootstrap(args) do
+    System.put_env("MIX_TARGET", "rpi3")
+    Application.start(:nerves_bootstrap)
+    Mix.Task.run("loadconfig", args)
+  end
 
   # Dependencies can be Hex packages:
   #
@@ -37,7 +43,7 @@ defmodule Test.Mixfile do
   #   {:my_dep, git: "https://github.com/elixir-lang/my_dep.git", tag: "0.1.0"}
   #
   # Type "mix help deps" for more examples and options
-  def deps do
+  defp deps do
     [
       {:nerves_system_rpi3, path: "../", runtime: false},
       {:nerves_system_test, github: "nerves-project/nerves_system_test"}
