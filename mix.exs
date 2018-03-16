@@ -1,4 +1,4 @@
-defmodule NervesSystemRpi3.Mixfile do
+defmodule NervesSystemRpi3.MixProject do
   use Mix.Project
 
   @app :nerves_system_rpi3
@@ -31,7 +31,7 @@ defmodule NervesSystemRpi3.Mixfile do
     Mix.Task.run("loadconfig", args)
   end
 
-  def nerves_package do
+  defp nerves_package do
     [
       type: :system,
       artifact_sites: [
