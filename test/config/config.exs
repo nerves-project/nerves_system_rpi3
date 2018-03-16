@@ -20,19 +20,18 @@ websocket_protocol = System.get_env("WEBSOCKET_PROTOCOL") || "ws"
 # Common configuration
 
 # Configure shoehorn boot order.
-config :shoehorn, 
-  app: :nerves_system_test, 
+config :shoehorn,
+  app: :nerves_system_test,
   init: [:nerves_runtime, :system_registry_term_storage, :nerves_network]
 
 # Only trust signed firmware
-config :nerves_system_test, :firmware, 
-  public_key: System.get_env("NERVES_FW_PUB_KEY")
+config :nerves_system_test, :firmware, public_key: System.get_env("NERVES_FW_PUB_KEY")
 
 # Configure system_registry term storage to store the wifi credentials on the
 #  app data partition. If the device is using eth0 as the primary connection
 #  mechanism the wlan0 settings do not need to be configured.
-config :system_registry, SystemRegistry.TermStorage, 
-  path: "/root/system_registry", 
+config :system_registry, SystemRegistry.TermStorage,
+  path: "/root/system_registry",
   scopes: [
     [:config, :network_interface, "wlan0", :ssid],
     [:config, :network_interface, "wlan0", :psk]
@@ -56,7 +55,6 @@ config :nerves_network, :default,
 config :nerves_system_test, NervesTestServer.Socket,
   url: "#{websocket_protocol}://#{test_server}/socket/websocket"
 
-
 # Configure the test suite. nerves_system_test needs to know information such as
 #  system - the name of the system repo the tests are being executed on
 #  network_interface - the interface that should be used for reporting the
@@ -66,10 +64,9 @@ config :nerves_system_test, NervesTestServer.Socket,
 #    of the app and dependencies. The default layout runs tests that are common
 #    across devices (:nerves_system_test) and those that are specific to the
 #    device (this app)
-config :nerves_system_test, 
-  system: system, 
-  network_interface: 
-  network_interface, 
+config :nerves_system_test,
+  system: system,
+  network_interface: network_interface,
   tests: [
     {:test, :priv_dir, "test"},
     {:nerves_system_test, :priv_dir, "test"}
@@ -88,4 +85,3 @@ config :nerves_runtime, :kv,
   nerves_fw_product: Mix.Project.config()[:app],
   nerves_fw_vcs_identifier: System.get_env("NERVES_FW_VCS_IDENTIFIER"),
   nerves_fw_version: Mix.Project.config()[:version]
-
