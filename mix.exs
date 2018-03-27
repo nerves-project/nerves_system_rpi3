@@ -84,6 +84,7 @@ defmodule NervesSystemRpi3.MixProject do
       "post-build.sh",
       "cmdline.txt",
       "linux-4.4.defconfig",
+      "linux-4.9.defconfig",
       "config.txt"
     ]
   end
