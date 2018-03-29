@@ -1,5 +1,18 @@
 # Changelog
 
+## v1.0.0-rc.2
+
+Upgraded the Linux kernel from 4.4 -> 4.9. Due to the coupling
+between the Linux kernel and rpi-firmware and possibly rpi-userland, if
+you have a custom system based off this, you should update your Linux
+kernel as well. (see `nerves_defconfig`)
+
+  * Enhancements
+    * Support for Raspberry Pi 3 B+
+
+  * Updated dependencies
+    * [nerves_system_br v1.0.0-rc.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.0.0-rc.3)
+
 ## v1.0.0-rc.1
 
 This release contains updates to Erlang and heart from `nerves_system_br` and
