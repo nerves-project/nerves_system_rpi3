@@ -18,7 +18,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | GPIO, I2C, SPI       | Yes - Elixir ALE                |
 | ADC                  | No                              |
 | PWM                  | Yes, but no Elixir support      |
-| UART                 | 1 available - ttyS0             |
+| UART                 | 1 available - ttyAMA0           |
 | Camera               | Yes - via rpi-userland          |
 | Ethernet             | Yes                             |
 | WiFi                 | Yes - Nerves.Network            |
