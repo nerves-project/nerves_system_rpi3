@@ -1,5 +1,10 @@
 # Changelog
 
+## v1.0.0-dev
+
+The serial port on the GPIO pins is now assigned to "dev/ttyAMA0" like all
+other RPi systems.
+
 ## v1.0.0-rc.2
 
 Upgraded the Linux kernel from 4.4 -> 4.9. Due to the coupling
