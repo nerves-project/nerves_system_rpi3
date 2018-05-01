@@ -48,7 +48,8 @@ configuration found here, do the following (this is somewhat tedious):
 1. Start with `arch/arm/configs/bcmrpi_defconfig`. This is the kernel
    configuration used in the official Raspberry Pi images.
 1. Turn off all filesystems except for `ext4`, `squashfs`, `tmpfs`, `proc`,
-   `sysfs`, and `vfat`. Squashfs only needs ZLIB support.
+   `sysfs`, and `vfat`. Squashfs only needs ZLIB support. Also enable
+   `CONFIG_SQUASHFS_FILE_DIRECT`.
 1. `vfat` needs to default to `utf8`. Enable native language support for
    `ascii`, `utf-8`, `ISO 8859-1`, codepage 437, and codepage 850.
 1. Disable all network drivers and wireless LAN drivers except for Broadcom
@@ -110,5 +111,11 @@ configuration found here, do the following (this is somewhat tedious):
    tons of device drivers in the list.
 1. Disable IIO and UIO.
 1. Disable NXP PCA9685 PWM driver
+1. Disable CONFIG_NETFILTER and CONFIG_NET_SCHED (may need to be revisited)
+1. Disable CONFIG_MSDOS_FS
+1. Disable CONFIG_FB_UDL
+1. Remove IPv6 advanced routing and tunnelling options.
+1. Disable CONFIG_FSCACHE. This is for local caching of network filesystems like
+   NFS and SMB; not a generic filesystem cache.
 
 [Image credit](#fritzing): This image is from the [Fritzing](http://fritzing.org/home/) parts library.
