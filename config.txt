@@ -1,4 +1,4 @@
-# Default Nerves RPi3 config.txt
+# Default Nerves RPi 3 config.txt
 #
 # It's possible to override this file by using a custom fwup.conf
 # configuration to pull in a replacement.
