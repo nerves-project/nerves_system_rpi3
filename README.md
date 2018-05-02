@@ -18,11 +18,29 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | GPIO, I2C, SPI       | Yes - Elixir ALE                |
 | ADC                  | No                              |
 | PWM                  | Yes, but no Elixir support      |
-| UART                 | 1 available - ttyAMA0           |
+| UART                 | 1 available - `ttyAMA0`         |
 | Camera               | Yes - via rpi-userland          |
 | Ethernet             | Yes                             |
 | WiFi                 | Yes - Nerves.Network            |
 | Bluetooth            | Not supported yet               |
+
+## Using
+
+The most common way of using this Nerves System is create a project with `mix
+nerves.new` and to export `MIX_TARGET=rpi3`. See the [Getting started
+guide](https://hexdocs.pm/nerves/getting-started.html#creating-a-new-nerves-app)
+for more information.
+
+If you need custom modifications to this system for your device, clone this
+repository and update as described in [Making custom
+systems](https://hexdocs.pm/nerves/systems.html#customizing-your-own-nerves-system)
+
+If you're new to Nerves, check out the
+[nerves_init_gadget](https://github.com/nerves-project/nerves_init_gadget)
+project for creating a starter project. It will get you started with the basics
+like bringing up networking, initializing the writable application data
+partition, and enabling ssh-based firmware updates.  It's easiest to begin by
+using the wired Ethernet interface 'eth0' and DHCP.
 
 ## Supported WiFi devices
 
