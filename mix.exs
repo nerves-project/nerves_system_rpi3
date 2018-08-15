@@ -77,6 +77,7 @@ defmodule NervesSystemRpi3.MixProject do
       "nerves_defconfig",
       "README.md",
       "VERSION",
+      "fwup-include",
       "rootfs_overlay",
       "fwup.conf",
       "fwup-revert.conf",
