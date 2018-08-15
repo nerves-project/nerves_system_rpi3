@@ -48,7 +48,7 @@ defmodule NervesSystemRpi3.MixProject do
   defp deps do
     [
       {:nerves, "~> 1.0", runtime: false},
-      {:nerves_system_br, "1.4.1", runtime: false},
+      {:nerves_system_br, "1.4.2", runtime: false},
       {:nerves_toolchain_arm_unknown_linux_gnueabihf, "1.1.0", runtime: false},
       {:nerves_system_linter, "~> 0.3.0", runtime: false},
       {:ex_doc, "~> 0.18", only: :dev}
@@ -72,19 +72,21 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp package_files do
     [
+      "fwup_include",
+      "rootfs_overlay",
+      "CHANGELOG.md",
+      "cmdline.txt",
+      "config.txt",
+      "fwup-revert.conf",
+      "fwup.conf",
       "LICENSE",
+      "linux-4.9.defconfig",
       "mix.exs",
       "nerves_defconfig",
-      "README.md",
-      "VERSION",
-      "rootfs_overlay",
-      "fwup.conf",
-      "fwup-revert.conf",
-      "post-createfs.sh",
       "post-build.sh",
-      "cmdline.txt",
-      "linux-4.9.defconfig",
-      "config.txt"
+      "post-createfs.sh",
+      "README.md",
+      "VERSION"
     ]
   end
 
