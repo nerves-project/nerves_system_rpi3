@@ -80,7 +80,7 @@ defmodule NervesSystemRpi3.MixProject do
       "fwup-revert.conf",
       "fwup.conf",
       "LICENSE",
-      "linux-4.9.defconfig",
+      "linux-4.14.defconfig",
       "mix.exs",
       "nerves_defconfig",
       "post-build.sh",
