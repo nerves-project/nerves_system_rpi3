@@ -14,7 +14,7 @@ defmodule Test.MixProject do
     [
       app: :test,
       version: "0.1.0",
-      elixir: "~> 1.4",
+      elixir: "~> 1.6",
       archives: [nerves_bootstrap: "~> 1.0"],
       start_permanent: Mix.env() == :prod,
       aliases: [loadconfig: [&bootstrap/1]],
