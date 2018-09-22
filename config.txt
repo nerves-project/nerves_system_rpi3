@@ -9,6 +9,9 @@
 
 kernel=zImage
 
+# Disable the boot rainbow
+disable_splash=1
+
 # This, along with the Raspberry Pi "x" firmware is need for the camera
 # to work. The Raspberry Pi "x" firmware is selected via the Buildroot
 # configuration. See Target packages->Hardware handling->Firmware.
@@ -16,6 +19,10 @@ gpu_mem=192
 
 # Enable I2C and SPI
 dtparam=i2c_arm=on,spi=on
+
+# Enable these if you're using the Raspberry Pi 7" Touchscreen
+#dtoverlay=rpi-ft5406
+#dtoverlay=rpi-backlight
 
 # Comment this in or modify to enable OneWire
 # NOTE: check that the overlay that you specify is in the boot partition or
