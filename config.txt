@@ -5,7 +5,9 @@
 #
 # Useful links:
 # https://www.raspberrypi.org/documentation/configuration/config-txt/README.md
+# https://www.raspberrypi.org/documentation/configuration/device-tree.md
 # https://github.com/raspberrypi/documentation/blob/master/configuration/device-tree.md
+# https://github.com/raspberrypi/firmware/blob/master/boot/overlays/README
 
 kernel=zImage
 
@@ -17,8 +19,10 @@ disable_splash=1
 # configuration. See Target packages->Hardware handling->Firmware.
 gpu_mem=192
 
-# Enable I2C and SPI
-dtparam=i2c_arm=on,spi=on
+# Enable I2C, SPI, and audio
+dtparam=i2c_arm=on
+dtparam=spi=on
+dtparam=audio=on
 
 # Enable these if you're using the Raspberry Pi 7" Touchscreen
 #dtoverlay=rpi-ft5406
