@@ -23,6 +23,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Ethernet             | Yes                             |
 | WiFi                 | Yes - Nerves.Network            |
 | Bluetooth            | Not supported yet               |
+| Audio                | HDMI/Stereo out                 |
 
 ## Using
 
@@ -46,6 +47,28 @@ using the wired Ethernet interface 'eth0' and DHCP.
 
 The base image includes drivers for the onboard Raspberry Pi 3 wifi module
 (`brcmfmac` driver).
+
+## Audio
+
+The Raspberry Pi has many options for audio output. This system supports the
+HDMI and stereo audio jack output. The Linux ALSA drivers are used for audio
+output.
+
+To try it out, run:
+
+```elixir
+:os.cmd('espeak -ven+f5 -k5 -w /tmp/out.wav Hello')
+:os.cmd('aplay -q /tmp/out.wav')
+```
+
+The general Raspberry Pi audio documentation mostly applies to Nerves. For
+example, to force audio out the HDMI port, run:
+
+```elixir
+:os.cmd('amixer cset numid=3 2')
+```
+
+Change the last argument to `amixer` to `1` to output to the stereo output jack.
 
 ## Provisioning devices
 
@@ -88,7 +111,7 @@ the application partition so reformatting the application partition will not
 lose the serial number or any other data stored in this block.
 
 Additional key value pairs can be provisioned by overriding the default provisioning.conf
-file location by setting the environment variable 
+file location by setting the environment variable
 `NERVES_PROVISIONING=/path/to/provisioning.conf`. The default provisioning.conf
 will set the `nerves_serial_number`, if you override the location to this file,
 you will be responsible for setting this yourself.
