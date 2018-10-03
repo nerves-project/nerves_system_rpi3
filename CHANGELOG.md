@@ -1,5 +1,20 @@
 # Changelog
 
+## v1.5.0
+
+This release updates the Linux kernel from 4.4/4.9 to 4.14.71.
+
+* Enhancements
+  * Added Alsa utils `aplay` and `amixer` for audio support.
+  * Added `espeak` a speech synthesizer for text to audio.
+  * Automatically reboot if the Linux kernel panics (defaults to a 10 second
+    delay before the reboot)
+
+* Updated dependencies
+  * [nerves_system_br v1.5.2](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.5.2)
+  * Linux 4.14.71 with patches from the Raspberry Pi Foundation
+  * Erlang 21.0.9
+
 ## v1.4.1
 
 * Bug fixes
