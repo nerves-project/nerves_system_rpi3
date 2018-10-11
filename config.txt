@@ -24,9 +24,13 @@ dtparam=i2c_arm=on
 dtparam=spi=on
 dtparam=audio=on
 
-# Enable these if you're using the Raspberry Pi 7" Touchscreen
-#dtoverlay=rpi-ft5406
-#dtoverlay=rpi-backlight
+# Enable drivers for the Raspberry Pi 7" Touchscreen
+#
+# This makes it possible to run Scenic out of the box with the popular
+# Raspberry Pi 7" Touchscreen. It appears to be harmless for non-touchscreen
+# users, but if not, let us know!
+dtoverlay=rpi-ft5406
+dtoverlay=rpi-backlight
 
 # Comment this in or modify to enable OneWire
 # NOTE: check that the overlay that you specify is in the boot partition or
