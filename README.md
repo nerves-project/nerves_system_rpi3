@@ -19,6 +19,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | ADC                  | No                              |
 | PWM                  | Yes, but no Elixir support      |
 | UART                 | 1 available - `ttyAMA0`         |
+| Display              | HDMI or 7" RPi Touchscreen      |
 | Camera               | Yes - via rpi-userland          |
 | Ethernet             | Yes                             |
 | WiFi                 | Yes - Nerves.Network            |
