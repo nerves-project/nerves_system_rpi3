@@ -71,6 +71,30 @@ example, to force audio out the HDMI port, run:
 
 Change the last argument to `amixer` to `1` to output to the stereo output jack.
 
+## Linux's preempt_rt patches
+
+If you need better real-time performance from the Linux kernel, the `preempt_rt`
+patch set may help. Be aware that we do not test with the patches so this may
+not work. To enable it, make a custom system using this one as a base and add
+the following to the `nerves_defconfig`:
+
+```text
+BR2_LINUX_KERNEL_PATCH="http://cdn.kernel.org/pub/linux/kernel/projects/rt/4.14/patch-4.14.71-rt44.patch.xz"
+```
+
+Please verify the patch version since these instructions may be out-of-date.
+
+Next, update the Linux configuration to use it. Review the Nerves documentation
+for running `make linux-menuconfig` and enable `PREEMPT_RT_FULL`. Alternately,
+make the following change to the Linux configuration:
+
+```text
+-CONFIG_PREEMPT=y
++CONFIG_PREEMPT_RT_FULL=y
+ ```
+
+Build the system and you should now have a preempt_rt kernel.
+
 ## Provisioning devices
 
 This system supports storing provisioning information in a small key-value store
