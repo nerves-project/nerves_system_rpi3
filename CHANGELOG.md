@@ -1,5 +1,12 @@
 # Changelog
 
+## v1.5.1
+
+* Enhancements
+  * Enable configuration for the Raspberry Pi 7" touchscreen display by default.
+* Updated dependencies
+  * [nerves_system_br v1.5.3](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.5.3)
+
 ## v1.5.0
 
 This release updates the Linux kernel from 4.4/4.9 to 4.14.71.
