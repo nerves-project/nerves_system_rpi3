@@ -35,7 +35,7 @@ defmodule Test.MixProject do
   defp deps do
     [
       {:nerves_system_rpi3, path: "../", runtime: false},
-      {:nerves_system_test, github: "nerves-project/nerves_system_test"}
+      {:nerves_system_test, github: "nerves-project/nerves_system_test", branch: "nerves-hub"}
     ]
   end
 end
