@@ -86,6 +86,7 @@ defmodule NervesSystemRpi3.MixProject do
       "nerves_defconfig",
       "post-build.sh",
       "post-createfs.sh",
+      "ramoops.dts",
       "README.md",
       "VERSION"
     ]
