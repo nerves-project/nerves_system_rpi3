@@ -15,7 +15,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Storage              | MicroSD                         |
 | Linux kernel         | 4.14 w/ Raspberry Pi patches    |
 | IEx terminal         | HDMI and USB keyboard (can be changed to UART) |
-| GPIO, I2C, SPI       | Yes - Elixir ALE                |
+| GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                              |
 | PWM                  | Yes, but no Elixir support      |
 | UART                 | 1 available - `ttyAMA0`         |
