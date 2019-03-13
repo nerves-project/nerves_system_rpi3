@@ -13,7 +13,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | CPU                  | 1.2 GHz quad-core ARMv8         |
 | Memory               | 1 GB DRAM                       |
 | Storage              | MicroSD                         |
-| Linux kernel         | 4.14 w/ Raspberry Pi patches    |
+| Linux kernel         | 4.19 w/ Raspberry Pi patches    |
 | IEx terminal         | HDMI and USB keyboard (can be changed to UART) |
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                              |
@@ -79,7 +79,7 @@ not work. To enable it, make a custom system using this one as a base and add
 the following to the `nerves_defconfig`:
 
 ```text
-BR2_LINUX_KERNEL_PATCH="http://cdn.kernel.org/pub/linux/kernel/projects/rt/4.14/patch-4.14.71-rt44.patch.xz"
+BR2_LINUX_KERNEL_PATCH="http://cdn.kernel.org/pub/linux/kernel/projects/rt/4.19/patch-4.19.25-rt16.patch.xz"
 ```
 
 Please verify the patch version since these instructions may be out-of-date.
