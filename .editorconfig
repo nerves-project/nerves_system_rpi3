@@ -1,0 +1,2 @@
+[*.{in,mk}]
+insert_final_newline = true
