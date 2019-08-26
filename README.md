@@ -8,23 +8,23 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 ![Fritzing Raspberry Pi 3 image](assets/images/raspberry-pi-3-model-b.png)
 <br><sup>[Image credit](#fritzing)</sup>
 
-| Feature              | Description                     |
-| -------------------- | ------------------------------- |
-| CPU                  | 1.2 GHz quad-core ARMv8         |
-| Memory               | 1 GB DRAM                       |
-| Storage              | MicroSD                         |
-| Linux kernel         | 4.19 w/ Raspberry Pi patches    |
-| IEx terminal         | HDMI and USB keyboard (can be changed to UART) |
+| Feature              | Description                                                 |
+| -------------------- | ----------------------------------------------------------- |
+| CPU                  | 1.2 GHz quad-core Cortex-A53 (ARMv8)                        |
+| Memory               | 1 GB DRAM                                                   |
+| Storage              | MicroSD                                                     |
+| Linux kernel         | 4.19 w/ Raspberry Pi patches                                |
+| IEx terminal         | HDMI and USB keyboard (can be changed to UART)              |
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
-| ADC                  | No                              |
-| PWM                  | Yes, but no Elixir support      |
-| UART                 | 1 available - `ttyAMA0`         |
-| Display              | HDMI or 7" RPi Touchscreen      |
-| Camera               | Yes - via rpi-userland          |
-| Ethernet             | Yes                             |
-| WiFi                 | Yes - Nerves.Network            |
-| Bluetooth            | Not supported yet               |
-| Audio                | HDMI/Stereo out                 |
+| ADC                  | No                                                          |
+| PWM                  | Yes, but no Elixir support                                  |
+| UART                 | 1 available - `ttyAMA0`                                     |
+| Display              | HDMI or 7" RPi Touchscreen                                  |
+| Camera               | Yes - via rpi-userland                                      |
+| Ethernet             | Yes                                                         |
+| WiFi                 | Yes - Nerves.Network                                        |
+| Bluetooth            | Watch [Harald](https://github.com/verypossible/harald)      |
+| Audio                | HDMI/Stereo out                                             |
 
 ## Using
 
