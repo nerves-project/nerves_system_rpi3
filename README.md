@@ -22,7 +22,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Display              | HDMI or 7" RPi Touchscreen                                  |
 | Camera               | Yes - via rpi-userland                                      |
 | Ethernet             | Yes                                                         |
-| WiFi                 | Yes - Nerves.Network                                        |
+| WiFi                 | Yes - [VintageNet](https://hex.pm/packages/vintage_net)     |
 | Bluetooth            | Watch [Harald](https://github.com/verypossible/harald)      |
 | Audio                | HDMI/Stereo out                                             |
 
