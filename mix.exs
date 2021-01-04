@@ -57,7 +57,7 @@ defmodule NervesSystemRpi3.MixProject do
     [
       {:nerves, "~> 1.5.4 or ~> 1.6.0 or ~> 1.7.0", runtime: false},
       {:nerves_system_br, "1.14.0", runtime: false},
-      {:nerves_toolchain_arm_unknown_linux_gnueabihf, "~> 1.3.0", runtime: false},
+      {:nerves_toolchain_armv7_nerves_linux_gnueabihf, "~> 1.4.0", runtime: false},
       {:nerves_system_linter, "~> 0.4", only: [:dev, :test], runtime: false},
       {:ex_doc, "~> 0.22", only: :docs, runtime: false}
     ]
