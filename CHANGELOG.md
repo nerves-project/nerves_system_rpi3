@@ -4,8 +4,8 @@
 
 This release updates to Buildroot 2020.11.2, GCC 10.2 and OTP 23.2.4.
 
-When migrating custom systems based, please be aware of the following important
-changes:
+When migrating custom systems based on this one, please be aware of the
+following important changes:
 
 * There's a new `getrandom` syscall that is made early in BEAM startup. This has
   the potential to block the BEAM before Nerves can start `rngd` to provide
@@ -15,6 +15,9 @@ changes:
   vendor and the naming is now more consistent with other toolchain providers.
 * Experimental support for tooling that requires more information about the
   target has been added. The initial support focuses on zigler.
+
+If you're upgrading from a release before v1.13.3, please see the release notes
+for the versions below as well.
 
 * Updated dependencies
   * [nerves_system_br: bump to v1.14.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.14.4)
@@ -52,6 +55,10 @@ the kernel update in the Raspberry Pi OS.
 If you have based a custom system off of this one, please inspect the
 `nerves_defconfig` for WiFi firmware changes. WiFi firmware is no longer being
 pulled from the `rpi-wifi-firmware` since that package is out of date.
+
+Additionally, the upstream Raspberry Pi kernel changed the
+`pi3-miniuart-bt.dtbo` overlay's name to `miniuart-bt.dtbo`. The easy fix is to
+do a global search for `pi3-miniuart-bt` and replace it with `miniuart-bt`.
 
 * Updated dependencies
   * [nerves_system_br: bump to v1.13.4](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.13.4)
