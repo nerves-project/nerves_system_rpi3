@@ -13,7 +13,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | CPU                  | 1.2 GHz quad-core Cortex-A53 (ARMv8)                        |
 | Memory               | 1 GB DRAM                                                   |
 | Storage              | MicroSD                                                     |
-| Linux kernel         | 4.19 w/ Raspberry Pi patches                                |
+| Linux kernel         | 5.4 w/ Raspberry Pi patches                                 |
 | IEx terminal         | HDMI and USB keyboard (can be changed to UART)              |
 | GPIO, I2C, SPI       | Yes - [Elixir Circuits](https://github.com/elixir-circuits) |
 | ADC                  | No                                                          |
@@ -22,7 +22,7 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Display              | HDMI or 7" RPi Touchscreen                                  |
 | Camera               | Yes - via rpi-userland                                      |
 | Ethernet             | Yes                                                         |
-| WiFi                 | Yes - Nerves.Network                                        |
+| WiFi                 | Yes - [VintageNet](https://hex.pm/packages/vintage_net)     |
 | Bluetooth            | Watch [Harald](https://github.com/verypossible/harald)      |
 | Audio                | HDMI/Stereo out                                             |
 
