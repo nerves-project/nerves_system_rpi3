@@ -1,5 +1,27 @@
 # Changelog
 
+This project does NOT follow semantic versioning. The version increases as
+follows:
+
+1. Major version updates are breaking updates to the build infrastructure.
+   These should be very rare.
+2. Minor version updates are made for every major Buildroot release. Buildroot
+   makes four releases a year. Major Erlang/OTP updates are held off until the
+   next Buildroot release.
+3. Patch version updates are made for Buildroot minor releases and Erlang/OTP
+   minor and patch releases. They're also made to fix bugs and add features to
+   the build infrastructure.
+
+## v1.17.1
+
+This release makes it possible to use Bluetooth (via ttyS0).
+
+* Changes
+  * Force the GPU frequency (core_freq) to ensure that the MiniUART works. This makes
+    it possible to use BlueHeron or other Bluetooth libraries.
+  * Re-add the RPi 7" Touchscreen backlight drivers. Thanks to Jason Axelson for catching
+    this and adding the drivers back.
+
 ## v1.17.0
 
 This release updates to Buildroot 2021.08 and OTP 24.1. If you have made a
