@@ -22,8 +22,8 @@ This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 | Display              | HDMI or 7" RPi Touchscreen                                  |
 | Camera               | Yes - via rpi-userland                                      |
 | Ethernet             | Yes                                                         |
-| WiFi                 | Yes - [VintageNet](https://hex.pm/packages/vintage_net)     |
-| Bluetooth            | Watch [Harald](https://github.com/verypossible/harald)      |
+| WiFi                 | Yes                                                         |
+| Bluetooth            | [See Bluetooth](#bluetooth)                                 |
 | Audio                | HDMI/Stereo out                                             |
 
 ## Using
@@ -41,6 +41,12 @@ systems](https://hexdocs.pm/nerves/systems.html#customizing-your-own-nerves-syst
 
 The base image includes drivers for the onboard Raspberry Pi 3 wifi module
 (`brcmfmac` driver).
+
+## Bluetooth
+
+[BlueHeronTransportUART](https://github.com/blue-heron/blue_heron_transport_uart)
+supports bluetooth on the Pi 3A using `ttyS0`. The details are similar to the [RPi Zero W]
+(https://github.com/nerves-project/nerves_system_rpi0/issues/224#issuecomment-913799838).
 
 ## Audio
 
