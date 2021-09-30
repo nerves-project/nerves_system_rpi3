@@ -41,8 +41,10 @@ dtoverlay=rpi-backlight
 # information across reboots in DRAM
 dtoverlay=ramoops
 
+# Enable the UART (/dev/ttyAMA0) on the RPi3.
+enable_uart=1
 dtoverlay=miniuart-bt
-# Set the core frequency so that the built-in UART (/dev/ttyS0) operates at the correct speed.
-# This does slow down processing a bit, so for higher processing applications that don't need
-# this UART you may want to remove this line.
+# Set the GPU frequency so that the MiniUART (/dev/ttyS0) can be used for
+# Bluetooth. This has a small performance impact. See
+# https://www.raspberrypi.org/documentation/computers/config_txt.html#overclocking.
 core_freq=250
