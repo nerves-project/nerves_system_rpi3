@@ -12,6 +12,20 @@ follows:
    minor and patch releases. They're also made to fix bugs and add features to
    the build infrastructure.
 
+## v1.17.2
+
+This is a security/bug fix patch release. It should be safe to update for
+everyone.
+
+* Updated dependencies
+  * [nerves_system_br v1.17.1](https://github.com/nerves-project/nerves_system_br/releases/tag/v1.17.1)
+  * [Buildroot 2021.08.1](http://lists.busybox.net/pipermail/buildroot/2021-October/625642.html)
+  * [Erlang/OTP 24.1.2](https://erlang.org/download/OTP-24.1.2.README)
+
+* Improvements
+  * Include software versioning and licensing info (see legal-info directory in
+    artifact)
+
 ## v1.17.1
 
 This release makes it possible to use Bluetooth (via ttyS0).
