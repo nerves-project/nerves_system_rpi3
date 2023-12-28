@@ -12,6 +12,12 @@ follows:
    releases, and Linux kernel updates. They're also made to fix bugs and add
    features to the build infrastructure.
 
+## v1.25.1
+
+This fixes an accidental regression in 1.25.0 with the Linux 6.1 update. The
+Linux configuration wasn't updated correctly and it didn't work. This release
+has the fixed configuration.
+
 ## v1.25.0
 
 This is a major Buildroot, toolchain, and Linux kernel update that also adds
