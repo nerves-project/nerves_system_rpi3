@@ -24,6 +24,9 @@ dtparam=i2c_arm=on
 dtparam=spi=on
 dtparam=audio=on
 
+# Automatically load overlays for detected cameras
+camera_auto_detect=1
+
 # Enable drivers for the Raspberry Pi 7" Touchscreen
 #
 # This makes it possible to run Scenic out of the box with the popular
