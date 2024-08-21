@@ -77,7 +77,7 @@ defmodule NervesSystemRpi3.MixProject do
 
   defp description do
     """
-    Nerves System - Raspberry Pi 3 B / B+
+    Nerves System - Raspberry Pi 3B, 3B+, Zero 2W
     """
   end
 
