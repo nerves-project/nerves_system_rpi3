@@ -9,7 +9,7 @@
 		__overlay__ {
 			ramoops: ramoops@b000000 {
 				compatible = "ramoops";
-				reg = <0x0b000000 0x10000>; /* 64kB */
+				reg = <0x0b000000 0x12000>; /* 72kB */
 				record-size = <0>; /* disabled by default */
 				console-size = <0x8000>; /* 32kB */
 				ftrace-size = <0>; /* disabled by default */
