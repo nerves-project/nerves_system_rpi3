@@ -118,7 +118,7 @@ defmodule NervesSystemRpi3.MixProject do
       "nerves_defconfig",
       "post-build.sh",
       "post-createfs.sh",
-      "ramoops.dts",
+      "ramoops-overlay.dts",
       "README.md",
       "REUSE.toml",
       "VERSION"
