@@ -6,6 +6,9 @@
 
 This is the base Nerves System configuration for the Raspberry Pi 3 Model B.
 
+*This is the v1 maintenance branch. It is still maintained and is the
+recommended branch for most users. Active development is in the `main` branch.*
+
 ![Fritzing Raspberry Pi 3 image](assets/images/raspberry-pi-3-model-b.png)
 <br><sup>[Image credit](#fritzing)</sup>
 
