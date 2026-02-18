@@ -10,6 +10,7 @@ env:
   ELIXIR_VERSION: 1.19.5-otp-28
   NERVES_BOOTSTRAP_VERSION: 1.14.0
 
+permissions:
   id-token: write
   contents: read
 
