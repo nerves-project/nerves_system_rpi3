@@ -42,6 +42,20 @@ If you need custom modifications to this system for your device, clone this
 repository and update as described in [Making custom
 systems](https://nerves.hexdocs.pm/customizing-systems.html).
 
+### Igniter
+
+If your project uses [Igniter](https://igniter.hexdocs.pm), this system can be
+added to an existing Nerves project by running:
+
+```sh
+mix igniter.install nerves_system_rpi3
+```
+
+This adds `nerves_system_rpi3` to the `mix.exs` dependencies for the `rpi3`
+target and adds `:rpi3` to `@all_targets` if the project has it. Existing
+targets are kept. The installer doesn't have any options. It requires Nerves 2.0
+or later.
+
 ## Upgrading to 2.0
 
 If your application depended on a pre-2.0 version of this Nerves system and you
